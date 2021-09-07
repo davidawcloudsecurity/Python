@@ -1,11 +1,11 @@
 #Inspired by TryHackMe - Web Application Security - Brute Force BookFace
-#import random
-digits = 3 #reveal the number of digits 
+import random
+digits = 4 #reveal the number of digits 
 i=0
 z=0
 x="" #init password to nothing
 
-#generate random password
+#generate random password up to 4 digits
 while i < digits:
  z = random.randint(0,9)
  print(z)
@@ -14,7 +14,7 @@ while i < digits:
  
 
 y = 1
-print("Revealed: " + x)
+print("Revealed: " + x) #password reveal
 
 if digits == 1: 
  while y!=int(x):
@@ -33,10 +33,20 @@ elif digits == 3:
    print("00" + format(y))
   elif len(str(y)) == 2:
    print("0" + format(y))
-  if len(str(y)) == 3:
+  elif len(str(y)) == 3:
    print(y)
   y+=1
-  
+elif digits == 4: 
+ while y!=int(x):
+  if len(str(y)) ==1:
+   print("000" + format(y))
+  elif len(str(y)) == 2:
+   print("00" + format(y))
+  elif len(str(y)) == 3:
+   print("0" + format(y))
+  elif len(str(y)) == 4:
+   print(y)
+  y+=1  
   
 if y !=0:
  print("Reset Code is: " + format(y))
