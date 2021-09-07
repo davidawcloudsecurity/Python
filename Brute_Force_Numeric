@@ -1,6 +1,18 @@
-#Inspired by TryHackMe
-x = "024" #password
+#Inspired by TryHackMe - Web Application Security - Brute Force BookFace
+#import random
 digits = 3 #reveal the number of digits 
+i=0
+z=0
+x="" #init password to nothing
+
+#generate random password
+while i < digits:
+ z = random.randint(0,9)
+ print(z)
+ x = str(x) + str(z)
+ i+=1
+ 
+
 y = 1
 print("Revealed: " + x)
 
