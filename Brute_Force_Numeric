@@ -14,7 +14,7 @@ while i < digits:
  
 
 y = 1
-print("Revealed: " + x) #password reveal
+print("Code Random Generated: " + x)
 
 if digits == 1: 
  while y!=int(x):
@@ -49,4 +49,4 @@ elif digits == 4:
   y+=1  
   
 if y !=0:
- print("Reset Code is: " + format(y))
+ print("Reset Code Revealed: " + format(y))
