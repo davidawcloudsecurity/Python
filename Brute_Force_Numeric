@@ -1,0 +1,30 @@
+#Inspired by TryHackMe
+x = "024" #password
+digits = 3 #reveal the number of digits 
+y = 1
+print("Revealed: " + x)
+
+if digits == 1: 
+ while y!=int(x):
+  print(y)
+  y+=1
+elif digits == 2: 
+ while y!=int(x):
+  if len(str(y)) == 1:
+   print("0" + format(y))
+  elif len(str(y)) == 2:
+   print(y)
+  y+=1
+elif digits == 3: 
+ while y!=int(x):
+  if len(str(y)) ==1:
+   print("00" + format(y))
+  elif len(str(y)) == 2:
+   print("0" + format(y))
+  if len(str(y)) == 3:
+   print(y)
+  y+=1
+  
+  
+if y !=0:
+ print("Reset Code is: " + format(y))
