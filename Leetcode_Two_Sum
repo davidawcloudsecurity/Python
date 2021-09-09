@@ -30,10 +30,11 @@ Constraints:
 Only one valid answer exists.
 '''
 
+#bruteforce
 nums = [2,7,11,15]
 target = 9
 l=[]
-for i in range(0,len(nums)):
+for i in range(0,len(nums)): #len(nums) tell me what is the length inside nums. range(0, len(nums)) tells me to loop from 0 to the length of nums - 1 
   for j in range(i+1,len(nums)):
     if nums[i]+nums[j]==target:
       l.append(i)
