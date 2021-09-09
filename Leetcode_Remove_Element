@@ -50,20 +50,24 @@ Constraints:
 0 <= val <= 100
 '''
 
+#solution A
 nums = [0,1,2,2,3,0,4,2]
 val = 2
+k = 0
+
+while val in nums:
+  for x in nums:
+    if x ==val:
+      nums.pop(nums.index(x))
+      nums.append('')
+    if x !=val:
+      k+=1
+
+  
 print(nums)
-print(range(0,len(nums)))
-for n in range(0,len(nums)):
-    print(n)
-    if nums[n] == val:
-      print(str(nums[n]) + " " + str(n))
-      nums.pop(n)
-      nums.append("")
-      #print(nums.index(nums[n]))
-      #nums.remove(val)
-    
+print("Output " + str(k))
 
-print(nums)
-
-
+#solution B
+nums[:] = [x for x in nums if x != val]
+print(nums) #missing one slot
+print(len(nums)) #calculation abit off.
