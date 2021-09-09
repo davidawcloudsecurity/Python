@@ -60,12 +60,10 @@ while val in nums:
     if x ==val:
       nums.pop(nums.index(x))
       nums.append('')
-    if x !=val:
       k+=1
-
-  
+    
 print(nums)
-print("Output " + str(k))
+print("Output " + format(len(nums)-k))
 
 #solution B
 nums[:] = [x for x in nums if x != val]
