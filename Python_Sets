@@ -1,0 +1,10 @@
+#This is an example of what I think sets under python truly is. Its basically a random list shaker.
+#Everytime it is called. The order of the content inside gets mixed.
+#So I use this guessing game as a simple interpretation of what I think set really is
+y = {"apple", "banana", "cherry", "strawberry", "mango"}
+
+print("Guess today's flavour " + format(y))
+
+for a in y:
+  print("Today we 'll have " + a)
+  break
