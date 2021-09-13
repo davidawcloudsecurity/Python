@@ -8,3 +8,7 @@ print("Guess today's flavour " + format(y))
 for a in y:
   print("Today we 'll have " + a)
   break
+#I was wrong. This could be a better alternative
+import random
+
+print(random.randrange(1, 10))
